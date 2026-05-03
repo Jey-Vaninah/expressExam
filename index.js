@@ -83,14 +83,39 @@ app.get("/operations", (req, res) => {
         })
     );
 
-    if (result.length === 0) {
-        return res.status(404).json({ message: "User not found" });
-    }
-
     res.json(result);
 });
 
-app.get("/operations/:id", (req, res) => {
+app.get("/operations", (req, res) => {
+    const operations = readOperations();
+    const { type, createdAt, minResult, maxResult, dateFrom, dateTo } = req.query;
+    let result = operations
+
+    if (type) {
+        result = result.filter(opera => opera.type == type)
+    }
+    if (createdAt) {
+        result = result.filter(opera => opera.createdAt == createdAt)
+    }
+    if (minResult) {
+        result = result.filter(opera => Number(opera.result) >= Number(minResult));
+    }
+    if (maxResult) {
+        result = result.filter(opera => Number(opera.result) <= Number(maxResult));
+    }
+    if (dateFrom) {
+        result = result.filter(opera => opera.createdAt <= dateFrom)
+    }
+    if (dateFrom) {
+        result = result.filter(opera => Number(opera.createdAt) >= Number(dateFrom))
+    }
+    if (dateTo) {
+        result = result.filter(opera => Number(opera.createdAt) <= Number(dateTo))
+    }
+    res.json(result);
+});
+
+app.get("/operationsTest/:id", (req, res) => {
     const operations = readOperations();
     const id = Number(req.params.id)
     const operation = operations.find(opera => opera.id == id)
@@ -136,7 +161,7 @@ app.delete("/operations/:id", (req, res) => {
     const operationToDelete = operations.find(opera => opera.id === id);
 
     if (!operationToDelete) {
-        return res.status(404).json({ message: "User not found" });
+        return res.status(404).json({ message: "Operation not found" });
     }
 
     operations = operations.filter(opera => opera.id !== id);

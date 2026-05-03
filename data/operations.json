@@ -1,11 +1,10 @@
 [
-  {},
-  {
-    "id": 1,
-    "type": "addition",
-    "a": 5333,
-    "b": 3,
-    "result": 5336,
-    "createdAt": "1777804341972"
-  }
+    {
+        "id": 1,
+        "type": "addition",
+        "a": 5333,
+        "b": 3,
+        "result": 5336,
+        "createdAt": "1777804341972"
+    }
 ]

@@ -1,10 +1,98 @@
 [
-    {
-        "id": 1,
-        "type": "addition",
-        "a": 5333,
-        "b": 3,
-        "result": 5336,
-        "createdAt": "1777804341972"
-    }
+  {
+    "id": 1,
+    "type": "division",
+    "a": 5333,
+    "b": 0,
+    "result": "impossible de diviser un nombre par 0",
+    "createdAt": "1777813447149"
+  },
+  {
+    "id": 2,
+    "type": "multiplication",
+    "a": 17,
+    "b": 4,
+    "result": 68,
+    "createdAt": "1777813508924"
+  },
+  {
+    "id": 3,
+    "type": "addition",
+    "a": 120,
+    "b": 45,
+    "result": 165,
+    "createdAt": "1777813601123"
+  },
+  {
+    "id": 4,
+    "type": "soustraction",
+    "a": 500,
+    "b": 123,
+    "result": 377,
+    "createdAt": "1777813700456"
+  },
+  {
+    "id": 5,
+    "type": "multiplication",
+    "a": 9,
+    "b": 9,
+    "result": 81,
+    "createdAt": "1777813809981"
+  },
+  {
+    "id": 6,
+    "type": "division",
+    "a": 144,
+    "b": 12,
+    "result": 12,
+    "createdAt": "1777813907742"
+  },
+  {
+    "id": 7,
+    "type": "addition",
+    "a": 999,
+    "b": 1,
+    "result": 1000,
+    "createdAt": "1777814005610"
+  },
+  {
+    "id": 8,
+    "type": "multiplication",
+    "a": 17,
+    "b": 4,
+    "result": 68,
+    "createdAt": "1777813709435"
+  },
+  {
+    "id": 9,
+    "type": "soustraction",
+    "a": 17,
+    "b": -50,
+    "result": 67,
+    "createdAt": "1777813955647"
+  },
+  {
+    "id": 11,
+    "type": "multiplication",
+    "a": 17,
+    "b": -50,
+    "result": -850,
+    "createdAt": "1777814354613"
+  },
+  {
+    "id": 12,
+    "type": "multiplication",
+    "a": 17,
+    "b": 150,
+    "result": 2550,
+    "createdAt": "1777814760230"
+  },
+  {
+    "id": 45,
+    "type": "addition",
+    "a": 17,
+    "b": -50000,
+    "result": -49983,
+    "createdAt": "1777814970170"
+  }
 ]

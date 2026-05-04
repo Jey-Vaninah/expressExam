@@ -62,7 +62,7 @@ app.post("/operations/:id", (req, res) => {
     return res.status(201).json(newOperation)
 })
 
-app.get("/operations", (req, res) => {
+app.get("/operationsTest", (req, res) => {
     const operations = readOperations();
     const filters = req.query;
     const minResult = req.query;
@@ -115,7 +115,7 @@ app.get("/operations", (req, res) => {
     res.json(result);
 });
 
-app.get("/operationsTest/:id", (req, res) => {
+app.get("/operations/:id", (req, res) => {
     const operations = readOperations();
     const id = Number(req.params.id)
     const operation = operations.find(opera => opera.id == id)
